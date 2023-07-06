@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <%- include("template/head.ejs")%>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    
+</head>
+
+<body>
+  
+  <main>
+    <div class="container-fluid imagen">
+      <div class="row">
+        <div class=" col-center col-lg-6 col-md-12 col-sm-12"><img class="col-center col-12 bd-placeholder-img bd-placeholder-img-lg featurette image
+            img-fluid mx-auto" src="../img/ProyectoAlbaRemove.png"></div>
+      </div>
+    </div>
+    <div>
+      <form class="row g-3 needs-validation justify-content-center justify-content-center formulario mt-md-3 m-sm-4 m-4" action="/inicio"  method="POST">
+        <!--CORREO DEL USUARIO-->
+        <div class="col-md-12 position-relative text-center">
+          <label class="col-12 text-center" for="correo" class="form-label ">Correo de Usuario</label>
+          <input class="col-lg-2 col-md-4 col-sm-6 col-12 text-center" type="text" class=" form-control" autocomplete="off" id="usuarioform" name="correo">
+          
+        </div>
+        <!--CONTRASEÑA DEL USUARIO-->
+        <div class="col-md-12 position-relative text-center">
+          <label class="col-12 text-center" for="password" class="form-label">Contraseña</label>
+          <input class="col-lg-2 col-md-4 col-sm-6 col-12 text-center" type="password" class="form-control" id="passwordform" name="password">
+          
+
+        </div>
+
+        <div class="col-12 position-relative text-center">
+          <button class="btn btn-warning fw-bold" type="submit"> Enviar</button>
+        </div>
+        <div class="col-12 position-relative text-center">
+          <a class="btn btn-warning fw-bold" href="/registro"> Crear Usuario</a>
+        </div>
+      </form>
+    </div>
+    <!--MENSAJE SI NO EXISTE CUENTA-->
+    <div class="row">
+      <%if (locals.error){%>
+        <span class="col-center text-center col-6 fs-5">Parece que no tienes cuenta aquí,¿Deseas crear una cuenta?</span>
+        <%}%>
+      
+    </div>
+  </main>
+  <%- include("template/footer.ejs")%>
+</body>
+
+</html>

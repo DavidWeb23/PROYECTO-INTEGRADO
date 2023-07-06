@@ -1,0 +1,45 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+main{
+    background-color: #bad7b5;
+    margin-bottom: 300px;
+    padding-bottom: 300px;
+    min-height: 1800px;
+    height: 100vh;
+}
+
+header {
+    font-size: 4vw;
+    background-color:#eee8cd;
+    max-height:200px;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+.izquierdo{
+    min-height: 1800px;
+    background-color: #dac56f;
+    height: 100vh;
+}
+.derecho{
+    min-height: 1800px;
+    background-color: #dac56f;
+    height:100vh
+}
+footer {
+    background-color: #eee8cd;
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
+    
+}
+#textoPerfil::placeholder{
+    color:black;
+    font-weight: bold;
+    
+}

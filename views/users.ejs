@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include("template/head.ejs")%>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  
+</head>
+
+<body>
+  <%- include("template/header.ejs")%>
+  <main class="container-fluid p-0 mb-0">
+
+    <%- include("template/navleft.ejs")%>
+
+<!--Toda la tabla con la info necesaria de cada usuario-->
+    <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+        <div class="row justify-content-around">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-10 table-responsive overflow-auto text-center bg-secondary rounded border border-secondary border-1 mt-3">
+                <table class="table">
+                    <thead class="thead-dark fs-5">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Correo</th>
+                            
+                            <th scope="col">Rol</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Fecha Ingreso</th>
+                            <th scope="col">Metodo Pago</th>
+                            <th scope="col">Grupo Pago</th>
+                            <th scope="col">ID Amigos</th>
+                            
+                        </tr>
+                    </thead>
+    
+                    <tbody class="border-bottom border-dark text-light">
+    
+                        <!--Array de los Usuario que se encuentran en el Sistema-->
+                        <% arrayUsuarios.forEach(usuarios=> { %>
+                            <tr>
+                                <td>
+                                    <%= usuarios.nombre %>
+                                </td>
+                                <td>
+                                    <%= usuarios.apellidos %>
+                                </td>
+                                <td>
+                                    <%= usuarios.correo %>
+                                </td>
+                               
+                                <td>
+                                    <%= usuarios.rol %>
+                                </td>
+                                <td>
+                                    <%= usuarios.telefono %>
+                                </td>
+            
+                                <td>
+                                    <%= usuarios.ciudad %>
+                                </td>
+                                
+                                <td>
+                                    <%= usuarios.fechaIngreso %>
+                                </td>
+                                <td>
+                                    <%= usuarios.metodoPago %>
+                                </td>
+                                <td>
+                                    <%= usuarios.grupoPago %>
+                                </td>
+                                
+                                <td>
+                                    <%= usuarios.numeroID %>
+                                </td>
+                                
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-7 text-center row">
+                <%if (usuario.rol=="Profesor" ){%>
+                    <div class="col-sm-12 col-md-6">
+                        <a class="btn btn-secondary btn-block my-4 me-sm-0 me-md-5" href="/registrousuario">Nuevo Usuario</a>
+                </div>
+                    <%}%>
+                    <div class="col-sm-12 col-md-6">
+                        <a class="btn btn-secondary btn-block my-4" href="/">Volver</a>
+                    </div>
+            </div>
+        </div>
+      
+
+    </div>
+
+
+    <%- include("template/navright.ejs")%>
+
+
+
+
+  </main>
+  <%- include("template/footer.ejs")%>
+</body>
+
+</html>
+
+
+

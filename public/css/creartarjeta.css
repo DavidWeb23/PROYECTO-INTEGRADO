@@ -1,0 +1,91 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+main{
+    background-color: #bad7b5;
+    margin-bottom: 300px;
+    padding-bottom: 300px;
+    min-height: 3200px;
+    height: 100vh;
+}
+
+header {
+    font-size: 4vw;
+    background-color:#eee8cd;
+    max-height:200px;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+.izquierdo{
+    min-height: 3200px;
+    background-color: #dac56f;
+    height: 100vh;
+}
+.derecho{
+    min-height: 3200px;
+    background-color: #dac56f;
+    height:100vh
+}
+footer {
+    background-color: #eee8cd;
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
+    
+}
+#textoPerfil::placeholder{
+    color:black;
+    font-weight: bold;
+    
+}
+#textoPreguntas::placeholder{
+    color:black;
+    font-weight: bold;
+    white-space: normal;
+    vertical-align: middle;
+}
+#textoRespuesta::placeholder{
+    color:white;
+    
+    
+}
+#textoPreguntas span{
+    text-overflow: ellipsis;
+}
+textarea{
+    resize: none;
+}
+textarea::placeholder {
+    padding: 30px 0;
+  }
+.carta-box {
+    margin-bottom: 70px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    
+  }
+  
+  .carta-box:active .carta {
+      transform: rotateY(180deg);
+  }
+  
+  .carta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+  }
+  
+  .cara {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .cara.reverso {
+    transform: rotateY(180deg);
+  }

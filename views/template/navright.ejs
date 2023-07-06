@@ -1,0 +1,59 @@
+<div class="border-start border-dark border-2 pt-5 float-end col-2 derecho d-none d-lg-block">
+  <%if (usuario.rol=="Profesor" ){%>
+    
+    <!--Menu de Navegación Derecho Responsive-->
+    <ul class="list-unstyled ps-3">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed boton" data-bs-toggle="collapse"
+          data-bs-target="#cr-proyecto" aria-expanded="true"><span class="fs-5 fw-bold">Crear Proyecto</span>
+
+        </button>
+        <div class="collapse show menu" id="cr-proyecto">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ps-4  small">
+            <li class="pb-3"><a id="preguntascrear" href="/cortas/crearcortas" class="link-dark rounded text-decoration-none fs-6">Preguntas Cortas</a></li>
+            <li class="pb-3"><a id="desarrollocrear" href="/desarrollo/creardesarrollo" class="link-dark rounded text-decoration-none fs-6">Examen Desarrollo</a>
+            </li>
+            <li class="pb-3"><a id="testcrear" href="/testunico/creartestunico" class="link-dark rounded text-decoration-none fs-6">Test</a></li>
+            <li class="pb-3"><a id="cantarcrear" href="/cantar/crearcantar" class="link-dark rounded text-decoration-none fs-6">Cantar Temas</a></li>
+            <li class="pb-3"><a id="tarjetascrear" href="/tarjetas/creartarjetas" class="link-dark rounded text-decoration-none fs-6">Tarjetas de Memoria</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top border-dark my-3 me-5"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded" aria-expanded="false"><a id="cantarcrear" href="/registrousuario" class="link-dark rounded text-decoration-none fs-6"><span
+          class="fs-5 fw-bold">Crear Usuario<span></a>
+            
+
+        </button>
+      </li>
+      
+      <li class="border-top border-dark my-3 me-5"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded" aria-expanded="false"><a id="cantarcrear" href="/mensajes" class="link-dark rounded text-decoration-none fs-6"><span
+          class="fs-5 fw-bold">Leer Buzón<span></a>
+            
+
+        </button>
+      </li>
+      <li class="border-top border-dark my-3 me-5"></li>
+    </ul>
+    <%}%>
+    <%if (usuario.rol=="Alumno" ){%>
+<!--Mensaje de Ayuda para los Usuarios-->
+      <div>
+        <h1 class="col-center text-center">¿Dudas?</h1>
+        <div class="row col-lg-12 d-none d-lg-block align-items-center text-center px-0 py-0 justify-content-center "><img class="bd-placeholder-img bd-placeholder-img-lg featurette image
+          img-fluid mx-auto;" src="/img/buho.png"></div>
+        <p class="mx-5 text-center">¿Tienes algún problema con los Ejercicios o la Plataforma de Aprendizaje?</p>
+        <div class="row col-6 text-center col-center justify-content-between">
+        <button class="btn btn-secondary text-center align-items-center rounded" aria-expanded="false"><a id="cantarcrear" href="/enviarmensaje" class="link-dark rounded text-decoration-none fs-6"><span
+          class="fs-5 fw-bold">Enviar Sugerencia<span></a>
+            
+
+        </button>
+      </div>
+      </div>
+      <%}%>
+  </div>

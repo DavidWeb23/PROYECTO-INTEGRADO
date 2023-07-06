@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include("template/head.ejs")%>
+  
+  <link rel="stylesheet" type="text/css" href="../css/perfil.css" />
+  
+</head>
+
+<body>
+  <%- include("template/header.ejs")%>
+  <main class="container-fluid p-0 mb-0">
+
+    <%- include("template/navleft.ejs")%>
+
+
+    <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+
+      <div class="h-100 m-3 col-11 float-none col-center border border-dark border-2 overflow-hidden"
+        style=" background-color:#eee8cd;max-height: 1800px;">
+        <div class=" row border border-dark border-end-0 border-top-0 border-start-0">
+          <div class="col-center pt-4 pb-md-3 pb-sm-3 pb-3 pb-lg-3">
+            <span class="fs-5 fw-bold">Perfil de Usuario</span>
+          </div>
+
+        </div>
+        <div class="col-12 mt-3" style="max-height: 1700px;">
+
+          <ul class="mb-3 list-unstyled">
+
+<!--Toda la Información Personal del Usuario-->
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Correo:</label><input
+                id="textoPerfil" class="textousuario col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.correo%>"></input>
+            </li>
+            
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Nombre:</label><input
+                id="textoPerfil" class="textonombre col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.nombre%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Apellidos:</label><input
+                id="textoPerfil" class="textoapellidos col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2"
+                disabled placeholder="<%=usuario.apellidos%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Ciudad:</label><input
+                id="textoPerfil" class="textociudad col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.ciudad%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Telefono:</label><input
+                id="textoPerfil" class="textotelefono col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2"
+                disabled placeholder="<%=usuario.telefono%>"></input>
+            </li>
+            
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Rol:</label><input
+                id="textoPerfil" class="textorol col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.rol%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Plan
+                de Formación:</label><input id="textoPerfil"
+                class="textoplan col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.grupoPago%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+              class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">ID Amigos:</label><input
+              id="textoPerfil" class="textonombre col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+              placeholder="<%=usuario.numeroID%>"></input>
+          </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Fecha
+                de Ingreso:</label><input id="textoPerfil"
+                class="textoingreso col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%=usuario.fechaIngreso%>"></input>
+            </li>
+            <li class="row col-12 m-0 py-3"><label for="textoPerfil"
+                class="form-label col-lg-3 col-md-4 col-sm-12 col-12 text-decoration-underline fw-bold align-self-center">Metodología
+                de Pago:</label><input id="textoPerfil"
+                class="textopago col-12 col-sm-12 col-md-8 col-lg-9 btn btn-secondary my-2" disabled
+                placeholder="<%= usuario.metodoPago %>"></input>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <!--Salir o Modificar Usuario-->
+      <div class="row form-inline my-2 my-lg-0 justify-content-around">
+        <a class="col-12 col-sm-12 col-md-12 col-lg-4 btn btn-success my-2" href="/">Volver a Inicio</a>
+        <a class="col-12 col-sm-12 col-md-12 col-lg-4 btn btn-success my-2 px-1 my-2" href="/perfil/editarperfil/<%= usuario._id %>"
+          >Modificar</a>
+      </div>
+
+    </div>
+
+
+
+
+    <%- include("template/navright.ejs")%>
+
+
+
+
+  </main>
+  
+
+  <%- include("template/footer.ejs")%>
+  
+</body>
+
+
+</html>

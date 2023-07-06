@@ -1,0 +1,51 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+main{
+    background-color: #bad7b5;
+    margin-bottom: 300px;
+    padding-bottom: 300px;
+    min-height: 1700px;
+    height: 100vh;
+}
+ul li{
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+ul li:hover{
+    text-overflow: clip;
+    overflow: visible;
+    
+}
+header {
+    font-size: 4vw;
+    background-color:#eee8cd;
+    max-height:200px;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+.izquierdo{
+    min-height: 1700px;
+    background-color: #dac56f;
+    height: 100vh;
+}
+.derecho{
+    min-height: 1700px;
+    background-color: #dac56f;
+    height:100vh
+}
+footer {
+    background-color: #eee8cd;
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
+    
+}
+.cuadrado{
+    min-height: 220px;
+}

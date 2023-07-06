@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("template/head.ejs")%>
+
+    <link rel="stylesheet" type="text/css" href="../css/creartarjeta.css" />
+    
+</head>
+
+<body>
+    <%- include("template/header.ejs")%>
+    <main class="container-fluid p-0 mb-0">
+
+        <%- include("template/navleft.ejs")%>
+
+
+        <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+
+            <div class="h-100 m-3 col-11 float-none col-center border border-dark border-2 overflow-hidden"
+                style=" background-color:#eee8cd;max-height: 1800px;min-height: 1300px;">
+                <div class=" row border border-dark border-end-0 border-top-0 border-start-0">
+                    <div class="col-center pt-4 pb-md-3 pb-sm-3 pb-3 pb-lg-3">
+                        <span class="fs-5 fw-bold">Crear Tarjetas de Memoria</span>
+                    </div>
+
+                </div>
+                <form action="/tarjetas/creartarjetas" class= "needs-validation formulario" method="POST">
+          
+                    <div class="col-12 mt-3" style="max-height: 1100px;">
+                      <div>
+                        <!--Se incluye el nombre del tema/area que se practica-->
+                      <input id="textoPreguntas" name="tema" type="text" class="col-12 col-sm-12 col-md-8 col-lg-9 btn btn-info my-2"
+                        placeholder="Nombre del Tema"></input>
+                        <!--Se incluye la pregunta y respuesta de cada una de las diez tarjetas-->
+                      </div>
+                      <div>
+                       <input id="textoPreguntas" name="pregunta1" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                            placeholder="Escribir Pregunta"></input>
+                          </div>
+                          
+            
+                    
+                        <div>
+                        <input id="textoRespuesta" name="respuesta1" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                             placeholder="Escribir Respuesta"></input>
+                           </div>
+                           
+             
+                    
+                    <div>
+                        <input id="textoPreguntas" name="pregunta2" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta2" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta3" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta3" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta4" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta4" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta5" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta5" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta6" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta6" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta7" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta7" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                            
+              
+                     
+                    
+                     <div>
+                        <input id="textoPreguntas" name="pregunta8" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                             placeholder="Escribir Pregunta"></input>
+                           </div>
+                           
+             
+                     
+                         <div>
+                         <input id="textoRespuesta" name="respuesta8" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                              placeholder="Escribir Respuesta"></input>
+                            </div>
+                        
+                            <div>
+                                <input id="textoPreguntas" name="pregunta9" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                                     placeholder="Escribir Pregunta"></input>
+                                   </div>
+                                   
+                     
+                             
+                                 <div>
+                                 <input id="textoRespuesta" name="respuesta9" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                                      placeholder="Escribir Respuesta"></input>
+                                    </div>
+                                    
+                      
+                             
+                             <div>
+                                <input id="textoPreguntas" name="pregunta10" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                                     placeholder="Escribir Pregunta"></input>
+                                   </div>
+                                   
+                     
+                             
+                                 <div>
+                                 <input id="textoRespuesta" name="respuesta10" type="text" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-secondary my-2"
+                                      placeholder="Escribir Respuesta"></input>
+                                    </div>
+                                    
+                      
+                             </div>
+                                      
+                            
+              <!--FIN DE LAS TARJETAS-->
+                     </div>
+                     
+                    
+                      <a class="col-12 col-sm-12 col-md-12 col-lg-4 btn btn-success my-2 px-1 m-5" href="/tarjetas" id="volveriniciarsesion">Ir a Tarjetas</a>
+                      <button class="col-12 col-sm-12 col-md-12 col-lg-3 btn btn-success my-2 px-1 my-2" type="submit">Guardar</button>
+                    
+                  </form>
+                
+            </div>
+
+        </div>
+
+
+
+
+        <%- include("template/navright.ejs")%>
+
+
+
+
+    </main>
+    <%- include("template/footer.ejs")%>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+body{
+    
+    background-color:#eee8cd;
+    min-height: 100%;
+    
+}
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+.imagen{
+max-height: 500px;
+}

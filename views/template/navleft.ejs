@@ -1,0 +1,136 @@
+<div class="border-end border-dark border-2 float-start pt-5 col-4 col-lg-2 col-md-3 col-sm-3  izquierdo">
+<!--Buzon de Navegación Izquierdo Responsive-->
+    <ul class="list-unstyled ps-lg-3 ps-md-3 ps-sm-1 ps-1">
+      <button id="proyectosboton" class="btn btn-toggle align-items-center rounded collapsed ps-0 boton" data-bs-toggle="collapse"
+          data-bs-target="#proyectos" aria-expanded="true" aria-controls="proyectos"><span
+            class="fs-5 fw-bold">Actividades</span>
+
+        </button>
+        <div class="collapse show menu" id="proyectos" aria-labelledby="headingTwo" data-parent="#accordion">
+          <ul class="card-body btn-toggle-nav list-unstyled fw-normal pb-1 ps-2 small">
+            <li class="pb-3"><a id="proyectoscortas" href="/cortas" class="link-dark rounded text-decoration-none fs-6">Preguntas Cortas</a></li>
+            <li class="pb-3"><a id="proyectosdesarrollo" href="/desarrollo" class="link-dark rounded text-decoration-none fs-6">Examen Desarrollo</a>
+            </li>
+            <li class="pb-3"><a id="proyectostest" href="/testunico" class="link-dark rounded text-decoration-none fs-6">Test</a></li>
+            <li class="pb-3"><a id="proyectoscantar" href="/cantar" class="link-dark rounded text-decoration-none fs-6">Cantar Temas</a></li>
+            <li class="pb-3"><a id="proyectostarjetas" href="/tarjetas" class="link-dark rounded text-decoration-none fs-6">Tarjetas de Memoria</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--Menu que se añade al disminuir el tamaño de la pantalla-->
+      <%if (usuario.rol=="Profesor" ){%>
+        <li class="border-top border-dark my-3 me-5 d-none d-sm-block d-md-block d-lg-none"></li>
+        <li class="mb-1 d-none d-sm-block d-md-block d-lg-none">
+          <button class="btn btn-toggle align-items-center rounded collapsed ps-0 boton" data-bs-toggle="collapse"
+            data-bs-target="#cr-proyecto" aria-expanded="true"><span class="fs-5 fw-bold">Crear Actividad</span>
+  
+          </button>
+          <div class="collapse menu" id="cr-proyecto" aria-labelledby="headingTwo" data-parent="#accordion">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ps-2 small">
+              <li class="pb-3"><a id="preguntascrear2" href="/cortas/crearcortas" class="link-dark rounded text-decoration-none fs-6">Preguntas Cortas</a></li>
+              <li class="pb-3"><a id="desarrollocrear2"href="/desarrollo/creardesarrollo" class="link-dark rounded text-decoration-none fs-6">Examen Desarrollo</a>
+              </li>
+              <li class="pb-3"><a id="testcrear2" href="/testunico/creartestunico" class="link-dark rounded text-decoration-none fs-6">Test</a></li>
+              <li class="pb-3"><a id="cantarcrear2" href="/cantar/crearcantar" class="link-dark rounded text-decoration-none fs-6">Cantar Temas</a></li>
+              <li class="pb-3"><a id="tarjetascrear2" href="/tarjetascreartarjetas" class="link-dark rounded text-decoration-none fs-6">Tarjetas de Memoria</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+        <%}%>
+      
+      
+
+
+      <li class="border-top border-dark my-3 me-5"></li>
+      <li class="mb-1 ">
+        <button class="btn btn-toggle align-items-center rounded collapsed ps-0 boton" data-bs-toggle="collapse"
+          data-bs-target="#tareas" aria-expanded="true"><span class="fs-5 fw-bold">Act.Realizadas</span>
+        </button>
+        <div class="collapse menu" id="tareas">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ps-2 small">
+            <li class="pb-3"><a href="/tareascortas"
+                class="link-dark rounded text-decoration-none fs-6 ">Cortas</a></li>
+            <li class="pb-3"><a href="/tareasdesarrollo"
+                class="link-dark rounded text-decoration-none fs-6 ">Desarrollo</a></li>
+            <li class="pb-3"><a href="/tareastestunico"
+                class="link-dark rounded text-decoration-none fs-6 ">Test</a></li>
+            
+
+          </ul>
+        </div>
+      </li>
+      <!--Menu que se añade al disminuir el tamaño de la pantalla-->
+      <%if (usuario.rol=="Profesor" ){%>
+      <li class="mb-1 d-none d-sm-block d-md-block d-lg-none">
+        <button class="btn btn-toggle align-items-center rounded ps-0" aria-expanded="false"><span
+            class="fs-5 fw-bold">Crear Tarea</span>
+
+        </button>
+      </li>
+      <li class="border-top border-dark my-3 me-5"></li>
+      
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed ps-0 boton" data-bs-toggle="collapse"
+          data-bs-target="#alumnos" aria-expanded="false">
+          <span class="fs-5 fw-bold">Alumnos</span>
+        </button>
+        <div class="collapse menu" id="alumnos">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 ps-2 small">
+            <li class="pb-3"><a href="/registro"
+                class="link-dark rounded text-decoration-none fs-6">Crear Alumno</a></li>
+            <li class="pb-3"><a href="/users"
+                class="link-dark rounded text-decoration-none fs-6">Alumnos</a></li>
+            
+          </ul>
+        </div>
+      </li>
+      
+      <li class="mb-1 d-none d-sm-block d-md-block d-lg-none">
+        <button class="btn btn-toggle align-items-center rounded ps-0" aria-expanded="false"><span
+            class="fs-5 fw-bold">Crear Alumno</span>
+        </button>
+      </li>
+      <li class="border-top border-dark my-3 me-5 d-block d-sm-block d-md-block d-lg-none"></li>
+        <li class="mb-1 d-block d-sm-block d-md-block d-lg-none">
+        <button class="btn btn-toggle align-items-center rounded ps-0" aria-expanded="false"><a id="cantarcrear" href="/mensajes" class="link-dark rounded text-decoration-none fs-6"><span
+          class="fs-5 fw-bold">Leer Buzón<span></a>
+            
+
+        </button>
+      </li>
+      <%}%>
+      <%if (usuario.rol=="Alumno" ){%>
+        <!--Función que se añade al alumno al disminuir la pantalla-->
+        <li class="border-top border-dark my-3 me-5 d-block d-sm-block d-md-block d-lg-none"></li>
+        <li class="mb-1 d-block d-sm-block d-md-block d-lg-none">
+          
+            <button class="btn btn-toggle align-items-center rounded ps-0" aria-expanded="false"><a id="cantarcrear" href="/registrousuario" class="link-dark rounded text-decoration-none fs-6"><span
+              class="fs-5 fw-bold">Enviar Sugerencia<span></a>
+                
+    
+            </button>
+          
+          
+        </li>
+      
+      <%}%>
+      <li class="border-top border-dark my-3 me-5"></li>
+      <li class="mb-1">
+        <a id="botonusuario3" class="btn btn-toggle align-items-center rounded ps-0" href="/perfil" aria-expanded="false">
+          <span class="fs-5 fw-bold">Cuenta Usuario</span>
+        </a>
+
+      </li>
+      <li class="border-top border-dark my-3 me-5"></li>
+      <li class="mb-1">
+        <a class="btn btn-toggle align-items-center rounded collapsed ps-0" aria-expanded="false" href="/inicio">
+          <span class="fs-5 fw-bold">Cerrar Sesión</span>
+      </a>
+
+      </li>
+      <li class="border-top border-dark my-3 me-5"></li>
+    </ul>
+  </div>

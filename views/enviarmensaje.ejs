@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("template/head.ejs")%>
+    <link rel="stylesheet" type="text/css" href="/css/crearproyectos.css" />
+    
+</head>
+
+<body>
+  <!--Header del Usuario/Estudiante que realiza el ENVIO DEL MENSAJE-->
+    <header class="container-fluid border-bottom border-dark border-1">
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-lg-2 d-none d-lg-block float-start align-items-center text-center px-0 py-0 "><img class="bd-placeholder-img bd-placeholder-img-lg featurette image
+            img-fluid mx-auto;" src="/img/ProyectoAlbaRemove.png"></div>
+          <div class="col-md-3 col-sm-3 col-4 d-lg-none float-start align-items-center text-center px-0 py-0 "><img class="bd-placeholder-img bd-placeholder-img-lg featurette image
+            img-fluid mx-auto;" src="/img/guest.png"><a id="botonusuario" href="/perfil" class="nombreperfil fw-bold text-dark text-decoration-none m-lg-4 m-xl-4 fs-4" ><%=usuario.nombre%></a></div>
+          <div class="col-8 text-center align-self-center float-none ">
+            <h1>Proyecto Alba</h1>
+            <h4>Learning Environment</h4>
+          </div>
+          <div class="col-2 d-none d-md-none d-lg-block float-start text-center p-0"><img class="bd-placeholder-img bd-placeholder-img-lg featurette image
+            img-fluid mx-auto pt-lg-1;" src="/img/guest.png"><a id="botonusuario2" href="/perfil" class="nombreperfil fw-bold text-dark text-decoration-none m-lg-4 m-xl-4 fs-4" ><%=usuario.nombre%></a></div>
+        </div>
+      </header>
+    <main class="container-fluid p-0 mb-0">
+
+        <%- include("template/navleft.ejs")%>
+
+
+        <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+
+            <div class="h-100 m-3 col-11 float-none col-center border border-dark border-2 overflow-hidden"
+                style=" background-color:#eee8cd;max-height: 1200px;">
+                <div class=" row border border-dark border-end-0 border-top-0 border-start-0">
+                    <div class="col-center pt-4 pb-md-3 pb-sm-3 pb-3 pb-lg-3">
+                        <span class="fs-5 fw-bold">Enviar Mensaje de Sugerencia</span>
+                    </div>
+
+                </div>
+                
+                <form action="/enviarmensaje" class= "needs-validation formulario" method="POST">
+                  
+                <div class="col-12 mt-3" style="max-height: 1100px;">
+                  <!--Nombre del Destinatario-->
+                    <div>
+                      <input id="textoPerfil" class="col-12 col-sm-12 col-md-8 col-lg-9 btn btn-info my-2" name="correoAlumno"
+                          placeholder="Nombre de Alumno" value="<%= usuario.correo %>"readonly></input>
+                        </div>
+                    
+                  
+                        <!--Asunto y Cuerpo del Mensaje enviado por el Estudiante-->  
+                                 
+                                    <div>
+                            <input id="textoPreguntas" name="titulo" type="text" placeholder="Asunto" class="col-12 col-sm-12 col-md-12 col-lg-12 btn btn-success my-2"
+                            ></input>
+                               </div>
+                               <div>
+                               <textarea id=mensaje name="mensaje" rows="30" cols="150" style=resize:none placeholder="Escribe aquí tu mensaje."></textarea>
+                              </div>
+                    
+                </div>
+                <a class="col-12 col-sm-12 col-md-12 col-lg-4 btn btn-success my-2 px-1 m-5" href="/" id="volveriniciarsesion">Volver a Inicio</a>
+                <%if (usuario.rol=="Alumno" ){%>
+                  <button class="col-12 col-sm-12 col-md-12 col-lg-3 btn btn-success my-2 px-1 my-2" type="submit">Enviar Todo</button>
+                  <%}%>
+                  
+            
+              </form>
+              
+            </div>
+            
+        
+        </div>
+
+
+
+
+        <%- include("template/navright.ejs")%>
+
+
+
+
+    </main>
+    <%- include("template/footer.ejs")%>
+    
+</body>
+
+</html>

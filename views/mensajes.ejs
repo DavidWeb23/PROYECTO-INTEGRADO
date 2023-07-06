@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include("template/head.ejs")%>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  
+</head>
+
+<body>
+  <%- include("template/header.ejs")%>
+  <main class="container-fluid p-0 mb-0">
+
+    <%- include("template/navleft.ejs")%>
+
+<!--Tabla con los Mensajes de Sugerencia-->
+    <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+        <div class="row justify-content-around">
+            <div class="col-12 col-sm-12 col-md-9 col-lg-10 table-responsive overflow-auto text-center bg-secondary rounded border border-secondary border-1 mt-3">
+                <table class="table">
+                    <thead class="thead-dark fs-5">
+                        <tr>
+                            <th scope="col">Correo de Usuario</th>
+                            <th scope="col">Asunto</th>
+                            <th scope="col">Mensaje</th>
+                            
+                        </tr>
+                    </thead>
+    
+                    <tbody class="border-bottom border-dark text-light">
+    
+                        <!--Haremos el foreach para recorrer el array de los Mensajes de Sugerencia-->
+                        <% arrayMensaje.forEach(mensaje=> { %>
+                            <tr>
+                                <td>
+                                    <%= mensaje.correoAlumno %>
+                                </td>
+                                <td>
+                                    <%= mensaje.titulo %>
+                                </td>
+                                <td>
+                                    <%= mensaje.mensaje %>
+                                </td>
+                             
+                                
+                                <%if (usuario.rol=="Profesor" ){%>
+                                    <td>
+                                        <a class="btn btn-warning btn-sm"
+                                            href="/mensajes/<%=mensaje.id%>">Leer</a>
+                                    </td>
+                                    <%}%>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="col-7 text-center row">
+                
+                    <div class="col-12">
+                        <a class="btn btn-secondary btn-block my-4" href="/">Volver</a>
+                    </div>
+            </div>
+        </div>
+      
+
+    </div>
+
+
+    <%- include("template/navright.ejs")%>
+
+
+
+
+  </main>
+  <%- include("template/footer.ejs")%>
+</body>
+
+</html>
+
+
+

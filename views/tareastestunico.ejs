@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include("template/head.ejs")%>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  
+</head>
+
+<body>
+  <%- include("template/header.ejs")%>
+  <main class="container-fluid p-0 mb-0">
+
+    <%- include("template/navleft.ejs")%>
+
+
+    <div class="float-start ms-0 row justify-content-center col-8 col-lg-8 col-md-9 col-sm-9 text-center">
+
+      <div class="h-100 m-3 col-11 float-none col-center border border-dark border-2 overflow-hidden"
+        style=" background-color:#eee8cd;max-height: 600px;">
+        <div class=" row border border-dark border-end-0 border-top-0 border-start-0">
+          <div class="col-xl-11 col-lg-10 col-sm-12 col-md-12 col-center pt-4 pb-md-3 pb-sm-3 pb-3 pb-lg-3"><span
+              class="fs-5 fw-bold">Actividades Corregidas Test Respuesta Unica</span></div>
+              <%if (usuario.rol=="Profesor" ){%>
+                <a class="btn col-lg-2 col-xl-1 d-none d-lg-block text-end pe-2 pt-1 pb-1"  href="/testunico/creartestunico"> <img class=" bd-placeholder-img bd-placeholder-img-lg featurette image
+                  img-fluid mx-auto align-items-end;" src="../img/+remove.png"></a>
+                <%}%>
+        </div>
+        <div class="col-12 overflow-auto mt-3" style="max-height: 500px;">
+          <!--Actividades corregidas del Alumno por el Profesor-->
+          <ul class="mb-3 float-none list-unstyled float-start">
+           <%if (usuario.rol=="Profesor" ){%>
+              <% arrayTestunico2.forEach(testunico2=> {if(testunico2.nota==null){%>
+                <li class="col-6 col-lg-2 col-md-3 col-sm-6 fs-5 float-start mt-3 cuadrado"><a href="/tareastestunico/<%= testunico2._id %>"><img class=" col-8 bd-placeholder-img bd-placeholder-img-lg featurette image
+                  img-fluid mx-3 align-items-end;" src="../img/lupa.jpg"><span class="p-1"><%= testunico2.tema %></span></a></li>
+                
+                        <% }}) %>
+              <%}%>
+              <!--Actividades corregidas del Alumno(SOLO DE ESE MISMO ALUMNO)-->
+              <%if (usuario.rol=="Alumno" ){%>
+            <% arrayTestunico2.forEach(testunico2=> {if(testunico2.nota==null&&testunico2.correoAlumno==usuario.correo){%>
+            <li class="col-6 col-lg-2 col-md-3 col-sm-6 fs-5 float-start mt-3 cuadrado"><a href="/tareastestunico/<%= testunico2._id %>"><img class=" col-8 bd-placeholder-img bd-placeholder-img-lg featurette image
+              img-fluid mx-3 align-items-end;" src="../img/lupa.jpg"><span class="p-1"><%= testunico2.tema %></span></a></li>
+            
+                    <% }}) %>
+                    <%}%>
+          </ul>
+        </div>
+      </div>
+      
+
+    </div>
+
+
+    <%- include("template/navright.ejs")%>
+
+
+
+
+  </main>
+  <%- include("template/footer.ejs")%>
+</body>
+
+</html>
